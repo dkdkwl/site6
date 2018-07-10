@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+body,th,td,input,select,textarea,button {font-size:14px;line-height:1.5;font-family:'Noto Sans','맑은고딕', 'Malgun Gothic','돋움',dotum,sans-serif;color:#333} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover {text-decoration:none}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+
+/*상단에 gnb 메뉴에 들어간 폰트입니다.*/
+/*font-family: 'Raleway', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Hind Siliguri', sans-serif;*/
+
+/*헤더 설정입니다*/
+
+#first_page{
+	background: url(../imgs/firsh_bg.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+#first_page::before{
+	position: absolute;
+	background:  url(../imgs/grid.png) 0 0 repeat;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+}
+.header{
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.1);
+	height: 60px;
+}
+.logo{
+	padding: 5px 0 0 5%;
+	float: left;
+}
+.wrap_menubar{
+	float: right;
+	padding : 20px 5% 0 0; ;
+}
+.menubar li{
+	float: left;
+	padding-left: 60px;
+}
+.menubar li a{
+	position: relative;
+	font-family: 'Hind Siliguri', sans-serif;
+	color: #fff;
+	font-weight: lighter;
+	font-size: 16px;
+	letter-spacing: -1;
+	transition-duration: 0.5s;
+	transition-property: all;
+}
+.menubar li a:hover{
+	color: #BE4058FF;
+}
+/*마우스를 오버 했을때 메뉴바 밑에 밑줄이 생기게 어떻게..*/
+
+.menubar li a:hover::after{
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background: #BE4058FF;
+	bottom: -10px;
+	left: 0;
+	content: ""	;	
+}
+
+.menubar .on a{
+	position: relative;
+	color: #BE4058FF;
+	transition-duration: 0.5s;
+	transition-property: all;
+}
+.menubar .on a:after{
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background: #BE4058FF;
+	bottom: -10px;
+	left: 0;
+	content: ""	;
+}
+
+.contents_first{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -302px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+}
+.contents_first h2{
+	display: inline-block;
+	font-weight: lighter;
+	letter-spacing: .2em;
+	font-size: 9.5em;
+	line-height: 1.1;
+
+}
+.contents_first h3{
+	font-weight: lighter;
+	font-size: 1.3em;
+}
+.boder_bottom{
+	display: inline-block;
+	height: 10px;
+	width: 70px;
+	padding-top: 30px;
+	border-bottom: 2px solid #fff;
+}
+.g_b{	
+	position: relative;
+	display: block;
+	overflow: hidden;
+	color: #fff;
+	text-align: left;
+	width: 160px;
+	height: 37px;
+	background: #3b5998;
+	border-radius: 5px;
+}
+.g_b span{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,0.1);
+	padding: 27px;
+	z-index: 100;
+}
+.g_b:before{
+	content: "";
+	transition-duration: 0.3s;
+	transition-property: all;
+}
+.g_b:hover::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: rgba(0,0,0,0.1);
+}
+.g_b i, .g_b p{
+	position: absolute;
+	top: 15%;
+	left: 46%;
+	font-size: 15px;
+}
+.g_b i{
+	top: 22%;
+	left: 12%;
+	font-size: 22px;
+	z-index: 100;
+}
+.g_b p{
+	font-size: 15px;
+	font-weight: 700;
+}
+.button1{
+	background: #3b5998;
+}
+.button2{
+	background: #08a0e9;
+}
+.button3{
+	background: #8134af;
+}
+.button4{
+	background: #db4437;
+}
+.wrap_button{
+	display: flex;
+	justify-content: space-around;
+}
+.wrap_button .area_button{
+	padding: 0 30px;
+}
+.contents_first2{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-left: -440px;
+}
+#two_page{
+	position: relative;
+	background-color: #252561;
+	background: url(../imgs/two_bg.jpg) center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+.contents_two{
+	position: absolute;
+	top: 35%;
+	left: 70%;
+	margin-left: -320px;
+	display: inline-block;
+}
+.contents_two h1  .contents_two h2, .contents_two p{
+	color: #333;
+	letter-spacing: .03em;
+	font-family: 'Hind Siliguri', sans-serif;	
+}
+.contents_two h1{
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 0.1em;
+}
+.contents_two h2{
+	font-size: 50px;
+	padding-top: 7px;
+	font-weight: 700;
+}
+.contents_two p{
+	font-size: 16px;
+	padding-top: 15px;
+	line-height: 1.7em;
+}
+.contents_two p span{
+	font-size: 30px;
+	font-weight: 700;
+}
+/*어떻게 설정을 해야할지 모르겠다.. 안됀다.*/
+
+/*	.col_2 div:nth-child(2) img{*/
+
+	.wrap_button .area_button:nth-child(3) i{
+		left: 11%;
+	}
+	.wrap_button .area_button:nth-child(4) i{
+		left: 11%;
+	}
+/*#two_page::before{
+	position: absolute;
+	background:  url(../imgs/grid.png) 0 0 repeat;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	}*/
+	#three_page{
+		position: relative;
+		background-color: #252561;
+		background: url(../imgs/trith_bg.jpg) center center no-repeat;
+		background-size: cover;
+		width: 100%;
+	}
+	.contents_three{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 100%;
+	}
+	.three_img_list{
+
+		width: 55%;
+		height: 60%;
+		display: inline-flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.col_1>div, .col_2>div, .row_1>div{
+		box-sizing: border-box;
+		border: 3px solid #fff;
+		box-shadow: .2em .2em .27em #125566;
+	}
+
+	.col_1{
+		height: 49.5%;
+		width: 40%;
+	}
+	.col_1 .big_img{
+		height: 100%;
+		width: 100%;
+
+		/*		background: dodgerblue;*/
+	}
+	.col_1 .big_img img, .col_2 .default_img img, .row_1 .small_img img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50%;		
+	}
+	.col_2 .default_img img{
+
+		object-position: 50% 10%;	
+	}
+	.col_2 div:nth-child(2) img{
+		object-position: 50% 73%;	
+	}
+	.row_1 .small_img img{
+		object-position: 50% 30%;	
+	}
+	.col_2{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 49.5%;
+		width: 59%;
+	}
+	.col_2 .default_img{
+		width: 100%;
+		height:48%;
+	}
+
+	.row_1{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 49.5%;
+		margin-top: 10px;
+	}
+	.row_1 .small_img{
+		width: 32.7%;
+		height: 100%;
+	}
+	#four_page{
+		position: relative;
+		font-family: 'Josefin Sans', sans-serif;
+	}
+	.four_content{
+		width: 100%;
+		height: 100%;
+		background: url(../imgs/four.jpg) center no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+	.four_footer{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: left;
+	}
+	.four_footerA{
+		overflow: hidden;
+		padding: 15px 0;
+		background: #eee;
+		text-align: center;
+		font-weight: 500;
+	}	
+	.wrap_footerA{
+		display: inline-block;
+		width: 80%;
+	}
+	.footerA_left{
+		text-align: left;
+		float: left;
+	}
+	.footerA_left h2{
+		font-size: 30px;
+	}
+	.footerA_right{
+		text-align: right;
+		padding-top: 10px;
+		float: right;
+	}
+	.four_footerB{
+		text-align: center;
+		width: 100%;
+		padding: 30px 0;
+		background: #fff;
+
+	}
+	.wrap_footerB_center{
+		display: inline-block;
+		text-align: left;	
+		width: 40%;
+	}
+	.footerB_center{
+		display: flex;
+		align-items: center;
+	}
+	.footerB_left{
+		float: left;
+	}
+	.footerB_left i{
+		font-size: 50px;
+		padding: 0 25px;
+	}
+	.footerB_right{
+		float: left;
+		font-weight: 500;
+	}
